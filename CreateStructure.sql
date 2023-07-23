@@ -4,7 +4,7 @@ create table dbo.SKU
 (
 	ID int identity
 	,Code as concat('s', convert(varchar, ID)) persisted unique
-	,Name varchar(150) not null
+	,Name nvarchar(256) not null
 
 	,constraint PK_SKU primary key (ID)
 );
@@ -12,7 +12,7 @@ create table dbo.SKU
 create table dbo.Family
 (
 	ID int identity
-	,SurName varchar(255) not null
+	,SurName nvarchar(256) not null
 	,BudgetValue decimal(18, 2) not null
 
 	,constraint PK_Family primary key (ID)
