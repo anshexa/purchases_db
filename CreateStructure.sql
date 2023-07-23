@@ -25,7 +25,7 @@ create table dbo.Basket
 	,ID_Family int not null
 	,Quantity int not null
 	,Value decimal(18, 2) not null
-	,PurchaseDate date not null default(convert (date, sysdatetime()))
+	,PurchaseDate date not null default(convert(date, sysdatetime()))
 	,DiscountValue decimal(18, 2)
 
 	,constraint FK_Basket_SKU foreign key (ID_SKU) references dbo.SKU (ID)
