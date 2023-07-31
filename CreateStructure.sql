@@ -12,7 +12,7 @@ create table dbo.SKU
 create table dbo.Family
 (
 	ID int identity
-	,SurName nvarchar(256) not null
+	,SurName varchar(255) not null
 	,BudgetValue decimal(18, 2) not null
 
 	,constraint PK_Family primary key (ID)
