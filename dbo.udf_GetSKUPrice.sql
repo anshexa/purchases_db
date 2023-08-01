@@ -1,11 +1,11 @@
 create function dbo.udf_GetSKUPrice(
-    @ID_SKU as int
+    @ID_SKU int
 )
 returns decimal(18, 2)
 as
     begin
-        declare @sumValues as decimal(18, 2);
-        declare @sumQuantities as decimal(18, 2);
+        declare @sumValues decimal(18, 2);
+        declare @sumQuantities decimal(18, 2);
         select
             @sumValues = sum(basket.Value)
             ,@sumQuantities = sum(basket.Quantity)
