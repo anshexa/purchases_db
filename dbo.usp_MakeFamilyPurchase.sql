@@ -10,7 +10,7 @@ as
                           where SurName = @FamilySurName);
 
         if @ID_family is null
-            throw 51000, N'Cемья с такой фамилией не найдена.', 1;
+            throw 51000, N'Семья с такой фамилией не найдена.', 1;
 
         declare @sum_basket_of_family decimal(18, 2);
         set @sum_basket_of_family = (select sum(dbo.Basket.Value)
